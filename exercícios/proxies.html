@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Treinando o uso do padrão Proxy</title>
+</head>
+<body>
+
+	<script>
+		
+		let funcionario = {email: "adler.coelho.santos@icloud.com"};
+
+		var funcionarioProxy = new Proxy(funcionario, {
+			set(target, prop, value, receiver) {
+				console.log("Armadilha aqui!");
+				console.log(`valor antigo ${target[prop]}, valor novo: ${value}`);
+				//return "**" + Reflect.set(target, prop, receiver) + "**";
+			}
+		});
+
+		funcionarioProxy.email = "adlercoelho@pontodeestudo.com.br";
+
+	</script>
+
+</body>
+</html>

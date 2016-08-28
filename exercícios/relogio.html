@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	class Relogio {
+
+	    constructor() {
+	        this._segundos = 0;
+
+	        setInterval(() => {
+	        	if (this._segundos == 60) {
+	        		this._segundos = 0;
+	        	}
+	            console.log(++this._segundos);
+	          }, 100);
+	    }
+	}
+
+    let carro = {
+        velocidade: 100,
+        acelera : () =>  {
+            console.log(this);
+            console.log(`Carro a ${this.velocidade} km por hora!`);
+        }
+    };
+    carro.acelera();	
+
+	//var relogio = new Relogio();	
+</script>
+
+</body>
+</html>

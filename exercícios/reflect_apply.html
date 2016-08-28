@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	let objeto1 = {
+
+	    nome: 'Bob'
+	};
+
+	let objeto2 = {
+
+	    nome: 'Leo'
+	}
+
+	function exibeNome(prefixo, sufixo) {
+	    alert(prefixo + this.nome + sufixo);
+	}	
+
+	Reflect.apply(exibeNome, objeto1, ["->","<-"]);
+	Reflect.apply(exibeNome, objeto2, ["->","<-"]);
+</script>
+
+
+</body>
+</html>
