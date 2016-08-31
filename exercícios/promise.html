@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+	<script type="text/javascript">
+
+		let ok = true;
+		let mili = 5000;
+		let promise = new Promise((resolve, reject) => {
+			if (ok) {
+				setTimeout(() => resolve("PROMISE EXECUTADA"), mili);				
+			} else {
+				setTimeout(() => reject("HOUVE PROBLEMAS"), mili);
+			}
+		});
+
+		promise
+		.then(res => console.log(res))
+		.catch(err => console.log(err));
+		console.log('FIM'); // novidade aqui!
+
+	</script>
+
+</html>
